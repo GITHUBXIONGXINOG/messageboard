@@ -1,17 +1,18 @@
 <template>
     <div class="page">
       <slide-page />
-      <select-page />
+      <!-- <select-page /> -->
+      <!-- <router-view></router-view> -->
     </div>
 </template>
 <script lang="ts">
 import { defineComponent } from 'vue' 
-import SelectPage from '../selectPage/selectPage.vue'
+// import SelectPage from '../selectPage/selectPage.vue'
 import SlidePage from '../slidePage/slidePage.vue'
 export default defineComponent({
     name:'App',
     components: {
-        SelectPage,
+        // SelectPage,
         SlidePage
     }
 

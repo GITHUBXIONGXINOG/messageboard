@@ -1,6 +1,6 @@
 <template>
-    <div class="selectPage">
-        selectInfo.vue
+    <div class="task">
+        task
     </div>
 </template>
 <script lang="ts">
@@ -11,10 +11,5 @@ export default defineComponent({
 })
 </script>
 <style scoped lang="scss">
-    .selectPage {
-        // width: 100px;
-        flex: 1;
-        // height: 100px;
-        border: 1px solid rebeccapurple;
-    }
+    
 </style>
