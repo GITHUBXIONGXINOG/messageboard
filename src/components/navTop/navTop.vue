@@ -16,8 +16,17 @@
     </div>
     <!-- 右侧设置区域 -->
     <div class="right_part">
-      <div class="setting">setting</div>
-      <div class="userInfo">userInfo</div>
+      <div class="settingWrap">
+        <svg class="icon setting" aria-hidden="true">
+          <use xlink:href="#icon-shezhi"></use>
+        </svg>
+      </div>
+
+      <div class="userInfoWrap">
+        <svg class="icon userInfo" aria-hidden="true">
+          <use xlink:href="#icon-yonghu1"></use>
+        </svg>
+      </div>
     </div>
   </div>
 </template>
@@ -63,29 +72,90 @@ export default defineComponent({
 //搜索框
 .searchInfo {
   width: 400px;
-  height: 30px;
+  height: 35px;
   background: #c3ddf7;
   border-radius: 3px;
   padding: 0 30px;
-  box-sizing:border-box;
-
+  box-sizing: border-box;
 }
 //搜索图标
-.icon-search, .icon-close{
+.icon-search,
+.icon-close {
   width: 20px;
   height: 20px;
   position: absolute;
   top: 0;
   bottom: 0;
   margin: auto;
-  &:focus {
+  &:hover {
     cursor: pointer;
   }
 }
+
 .icon-search {
- left: 1%;
+  left: 1%;
 }
 .icon-close {
   right: 1%;
 }
+//右侧区域
+.right_part {
+  width: 100px;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+
+//设置
+.settingWrap {
+  height: 50px;
+  width: 50px;
+  display: flex;
+  justify-content: center;
+  &:hover {
+    cursor: pointer;
+     background: #005a9e;
+  }
+}
+//设置图标
+.setting {
+  font-size: 20px;
+  height: 100%;
+  color: #ffffff;
+}
+//用户
+.userInfoWrap {
+  // background: #e6e6e6;
+  width: 50px;
+  height: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+   &:hover {
+      cursor: pointer;
+     background: #005a9e;
+
+    }
+ 
+}
+//图标背景
+.userInfoWrap::after {
+    content: '';
+    position:absolute;
+    width: 30px;
+    height: 30px;
+    background: #e6e6e6;
+    border-radius: 50%;
+    z-index: 1;
+}
+//用户图标
+.userInfo {
+  font-size: 20px;
+  background: transparent;
+  z-index: 2;
+  
+}
+ 
+ 
 </style>

@@ -6,6 +6,13 @@
   "description": "",
   "glyphs": [
     {
+      "icon_id": "4933437",
+      "name": "用户",
+      "font_class": "yonghu1",
+      "unicode": "e768",
+      "unicode_decimal": 59240
+    },
+    {
       "icon_id": "17393867",
       "name": "差",
       "font_class": "cha",
@@ -39,13 +46,6 @@
       "font_class": "fangzi",
       "unicode": "e6d3",
       "unicode_decimal": 59091
-    },
-    {
-      "icon_id": "1119364",
-      "name": "用户",
-      "font_class": "yonghu",
-      "unicode": "e63d",
-      "unicode_decimal": 58941
     },
     {
       "icon_id": "1506302",
