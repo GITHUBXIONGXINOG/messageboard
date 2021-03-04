@@ -1,0 +1,27 @@
+<template>
+    <div class="page">
+      <slide-page />
+      <select-page />
+    </div>
+</template>
+<script lang="ts">
+import { defineComponent } from 'vue' 
+import SelectPage from '../selectPage/selectPage.vue'
+import SlidePage from '../slidePage/slidePage.vue'
+export default defineComponent({
+    name:'App',
+    components: {
+        SelectPage,
+        SlidePage
+    }
+
+})
+</script>
+<style scoped lang="scss">
+    .page {
+        width: 100%;
+        height: 40rem;
+        border: 1px solid red;
+        display: flex;
+    }
+</style>
