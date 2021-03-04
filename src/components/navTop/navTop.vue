@@ -6,13 +6,23 @@
     </router-link>
     <!-- 搜索框 -->
     <div class="search-wrap">
-      <svg class="icon icon-search" aria-hidden="true">
-        <use xlink:href="#icon-sousuo_huaban1"></use>
-      </svg>
-      <input type="text" class="searchInfo" placeholder="Search" />
-      <svg class="icon icon-close" aria-hidden="true">
-        <use xlink:href="#icon-cha"></use>
-      </svg>
+      <button class="searchButton">
+        <svg class="icon icon-search" aria-hidden="true">
+          <use xlink:href="#icon-sousuo_huaban1"></use>
+        </svg>
+      </button>
+
+      <input
+        type="text"
+        class="searchInfo"
+        placeholder="Search"
+        v-model="state.searchInput"
+      />
+      <button class="clearInput" @click="clearInput()">
+        <svg class="icon icon-close" aria-hidden="true">
+          <use xlink:href="#icon-cha"></use>
+        </svg>
+      </button>
     </div>
     <!-- 右侧设置区域 -->
     <div class="right_part">
@@ -31,9 +41,23 @@
   </div>
 </template>
 <script lang="ts">
-import { defineComponent } from "vue";
+import { defineComponent, reactive } from "vue";
 export default defineComponent({
   name: "App",
+  setup() {
+    const state = reactive({
+      searchInput: "",
+
+    });
+    //清除输入
+    const clearInput = () => {
+      state.searchInput = ''
+    }
+    return {
+      state,
+      clearInput,
+    };
+  },
 });
 </script>
 <style scoped lang="scss">
@@ -44,7 +68,6 @@ export default defineComponent({
   color: #333333;
   font-size: 14px;
   background: #0078d7;
-  // margin: 0 0 20px;
   border-width: 1px 0px solid #e7e7e7;
   border-radius: 0 0 0 3px;
   box-shadow: 5px 2px 3px #888888;
@@ -68,6 +91,7 @@ export default defineComponent({
 //搜索外框
 .search-wrap {
   position: relative;
+  display: flex;
 }
 //搜索框
 .searchInfo {
@@ -83,20 +107,32 @@ export default defineComponent({
 .icon-close {
   width: 20px;
   height: 20px;
-  position: absolute;
   top: 0;
+  right: 0;
   bottom: 0;
+  left: 0;
   margin: auto;
+}
+
+
+.searchButton,
+.clearInput {
+  height: 35px;
+  width: 35px;
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   &:hover {
     cursor: pointer;
   }
 }
-
-.icon-search {
-  left: 1%;
+ 
+.searchButton {
+   left: 0;
 }
-.icon-close {
-  right: 1%;
+.clearInput {
+  right: 0;
 }
 //右侧区域
 .right_part {
@@ -115,7 +151,7 @@ export default defineComponent({
   justify-content: center;
   &:hover {
     cursor: pointer;
-     background: #005a9e;
+    background: #005a9e;
   }
 }
 //设置图标
@@ -126,36 +162,40 @@ export default defineComponent({
 }
 //用户
 .userInfoWrap {
-  // background: #e6e6e6;
   width: 50px;
   height: 50px;
   display: flex;
   align-items: center;
   justify-content: center;
-   &:hover {
-      cursor: pointer;
-     background: #005a9e;
-
-    }
- 
-}
-//图标背景
-.userInfoWrap::after {
-    content: '';
-    position:absolute;
+  &:hover {
+    cursor: pointer;
+    background: #005a9e;
+  }
+  //图标背景
+  &::after {
+    content: "";
+    position: absolute;
     width: 30px;
     height: 30px;
     background: #e6e6e6;
     border-radius: 50%;
     z-index: 1;
+  }
+}
+//图标背景
+.userInfoWrap::after {
+  content: "";
+  position: absolute;
+  width: 30px;
+  height: 30px;
+  background: #e6e6e6;
+  border-radius: 50%;
+  z-index: 1;
 }
 //用户图标
 .userInfo {
   font-size: 20px;
   background: transparent;
   z-index: 2;
-  
 }
- 
- 
 </style>
