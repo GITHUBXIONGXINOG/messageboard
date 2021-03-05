@@ -13,9 +13,11 @@ export default defineComponent({
 <style scoped lang="scss">
     .task {
         height: 52px;
-        width: 100%;
-        border: 1px solid red;
-        position:absolute;
+        width: 97%;
+        border: 1px solid transparent;
+        // position:absolute;
         top: 50px;
+        display: flex;
+        align-items: center;
     }
 </style>
