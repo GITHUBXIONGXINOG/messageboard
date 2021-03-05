@@ -1,5 +1,5 @@
 <template>
-  <div class="inbox">
+  <div class="tasks">
     <title-info title="Tasks" />
 
     <page-info />
@@ -20,4 +20,8 @@ export default defineComponent({
 });
 </script>
 <style scoped lang="scss">
+  .tasks{
+   
+ 
+  }
 </style>

@@ -1,8 +1,6 @@
 <template>
     <div class="page">
       <slide-page />
-      <!-- <select-page /> -->
-      <!-- <router-view></router-view> -->
     </div>
 </template>
 <script lang="ts">
@@ -23,5 +21,9 @@ export default defineComponent({
         height: 100%;
         border: 1px solid red;
         display: flex;
+        overflow: hidden;
+        >:nth-child(2) {
+            width: 80%;
+        }
     }
 </style>

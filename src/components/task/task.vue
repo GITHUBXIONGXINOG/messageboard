@@ -3,7 +3,7 @@
         task
     </div>
 </template>
-<script lang="ts">
+<script>
 import { defineComponent } from 'vue' 
 export default defineComponent({
     name:'App',
@@ -11,5 +11,11 @@ export default defineComponent({
 })
 </script>
 <style scoped lang="scss">
-    
+    .task {
+        height: 52px;
+        width: 100%;
+        border: 1px solid red;
+        position:absolute;
+        top: 50px;
+    }
 </style>

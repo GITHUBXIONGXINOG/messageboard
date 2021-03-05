@@ -24,7 +24,7 @@
       <span>Tasks</span>  
       </router-link>
   </div>
-  <router-view />
+  <router-view></router-view>
 </template>
 <script>
 import { defineComponent, provide, ref } from "vue";
@@ -54,6 +54,7 @@ export default defineComponent({
   flex-direction: column;
   background: #f4f4f4;
   box-shadow: -1px 10px 10px #eaeaea;
+  margin: 0 30px 0 0;
   a {
     height: 36px;
     display: flex;

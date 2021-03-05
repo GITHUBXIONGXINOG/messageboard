@@ -1,20 +1,41 @@
 <template>
     <div class="pageInfo">
-        pageInfo.vue
+        <task />
+        <ul class="page-background">
+            <li v-for="(n,index) in tabelLength" :key="index">
+                
+            </li>
+        </ul>
+      
     </div>
 </template>
-<script lang="ts">
+<script>
+import task from '../task/task.vue'
+
 import { defineComponent } from 'vue' 
 export default defineComponent({
     name:'App',
-
+    components: {
+        task
+    },
+    setup(){
+        const tabelLength = 20
+        return {
+            tabelLength
+        }
+    }
 })
 </script>
 <style scoped lang="scss">
     .pageInfo {
-        // width: 100px;
         flex: 1;
-        // height: 100px;
-        border: 1px solid rebeccapurple;
+        width: 100%;
+        position: relative;
+        .page-background{
+            li{
+                  height: 52px;
+                  border-bottom: 2px solid #e5e5e5;
+            }
+        }
     }
 </style>

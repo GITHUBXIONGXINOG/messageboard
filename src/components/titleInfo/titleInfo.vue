@@ -19,5 +19,7 @@ export default defineComponent({
     .title-info{
         font-weight: bold;
         color: #3e69e8;
+        margin: 30px 0 0 0;
+        // position: fixed;
     }
 </style>

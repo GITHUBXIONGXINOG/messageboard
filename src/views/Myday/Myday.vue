@@ -17,5 +17,7 @@ export default defineComponent({
 });
 </script>
 <style scoped lang="scss">
-
+  .myday {
+    // width: 100%;
+  }
 </style>
