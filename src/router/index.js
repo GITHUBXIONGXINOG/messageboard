@@ -1,16 +1,16 @@
 import { createRouter, createWebHistory } from 'vue-router'
-import Inbox from '../views/Inbox/Inbox.vue'
+import Tasks from '../views/Tasks/Tasks.vue'
 
 
 const routes = [
   {
     path: '/',
-    redirect: '/inbox'
+    redirect: '/tasks'
   },
   {
-    path: '/inbox',
-    name: 'Inbox',
-    component: Inbox,
+    path: '/tasks',
+    name: 'Tasks',
+    component: Tasks,
   },
   {
     path: '/myday',

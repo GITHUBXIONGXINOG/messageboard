@@ -7,7 +7,6 @@
 </template>
 <script lang="ts">
 import { defineComponent } from 'vue' 
-// import SelectPage from '../selectPage/selectPage.vue'
 import SlidePage from '../slidePage/slidePage.vue'
 export default defineComponent({
     name:'App',
